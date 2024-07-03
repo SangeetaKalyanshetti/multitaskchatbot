@@ -20,7 +20,7 @@ st.set_page_config(
 
 with st.sidebar:
     selected = option_menu(
-        menu_title="Gemini AI",
+        menu_title="Custom Gemini AI",
         options=["ChatBot", "Visual Storyteller","Question Hub"],
         menu_icon= "robot",
         icons=["chat-left-quote-fill", "file-earmark-image","code-square", "patch-question-fill"],
