@@ -15,7 +15,7 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 # Setting page configuration
 st.set_page_config(
     page_icon="💡",
-    page_title="Gemini AI",
+    page_title="Custom Gemini AI",
     layout= "centered"
 ) 
 
@@ -45,7 +45,7 @@ if selected == "ChatBot":
         st.session_state.chat_session = model.start_chat(history=[])
     
     # Page title
-    st.title("Gemini ChatBot 🤖")
+    st.title("Custom Gemini ChatBot 🤖")
     
     #display the chat history
     for message in st.session_state.chat_session.history:
@@ -69,8 +69,8 @@ if selected == "ChatBot":
 
 
 # Image Captioning Page
-if selected == "Image Captioning":
-    st.title("Snap Narrate 📸")
+if selected == "Visual Storyteller":
+    st.title("Visual Storyteller 📸")
     
     upload_image = st.file_uploader("Upload an Image..", type=["jpg", "png", "jpeg"])
     
@@ -84,7 +84,7 @@ if selected == "Image Captioning":
             resized_image = image.resize((800, 500))
             st.image(resized_image)
             
-        default_prompt = "Write a short caption for this image."
+        default_prompt = "Describe this image in a few words."
         
         # Getting the vision pro respone
         caption = gemini_pro_vision_response(default_prompt, image)
@@ -94,28 +94,28 @@ if selected == "Image Captioning":
             
             
 # Text Embedding Page
-if selected == "Embed text":
+#if selected == "Embed text":
     
-    st.title("Text Embeddings 🔠")
+    #st.title("Text Embeddings 🔠")
     
     # Text to embedding
-    input_text = st.text_area(
-        label="",
-        placeholder="Enter the text to get embeddings")
+    #input_text = st.text_area(
+        #label="",
+        #placeholder="Enter the text to get embeddings")
     
-    if st.button("Get Embeddings"):
-        response = embeddings_model_response(input_text)
-        st.markdown(response)
+    #if st.button("Get Embeddings"):
+        #response = embeddings_model_response(input_text)
+        #st.markdown(response)
     
     
 # Ask me anything Page
-if selected == "Ask me anything":
+if selected == "Question Hub":
     
-    st.title("Ask me anything...")
+    st.title("Question Hub")
     
     user_prompt = st.text_area(
         label="",
-        placeholder="Ask me anything...")
+        placeholder="Question Hub")
     
     if st.button("Get answer"):
         response = gemini_pro_response(user_prompt)
