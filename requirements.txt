@@ -1,0 +1,5 @@
+google-generativeai
+pillow
+streamlit
+streamlit-option-menu
+python-dotenv
