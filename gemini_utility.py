@@ -29,15 +29,15 @@ def gemini_pro_vision_response(prompt, image):
 
 # Function for Embedding for text
 
-def embeddings_model_response(input_text):
-    embeddings_model = "models/embedding-001"
-    embedding = genai.embed_content(
-            model=embeddings_model, 
-            content=input_text,
-            task_type="retrieval_document"
-        )
-    embedding_list = embedding["embedding"]
-    return embedding_list
+#def embeddings_model_response(input_text):
+ #   embeddings_model = "models/embedding-001"
+  #  embedding = genai.embed_content(
+   #         model=embeddings_model, 
+    #        content=input_text,
+     #       task_type="retrieval_document"
+      #  )
+    #embedding_list = embedding["embedding"]
+    #return embedding_list
 
 
 # Function to get a response from gemini pro 
