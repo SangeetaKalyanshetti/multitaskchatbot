@@ -6,7 +6,6 @@ from PIL import Image
 
 from gemini_utility import (load_gemini_pro_model,
                             gemini_pro_vision_response,
-                            embeddings_model_response,
                             gemini_pro_response)
 
 # Get the working directory everytime we run file
@@ -22,7 +21,7 @@ st.set_page_config(
 with st.sidebar:
     selected = option_menu(
         menu_title="Gemini AI",
-        options=["ChatBot", "Image Captioning", "Embed text", "Ask me anything"],
+        options=["ChatBot", "Visual Storyteller","Question Hub"],
         menu_icon= "robot",
         icons=["chat-left-quote-fill", "file-earmark-image","code-square", "patch-question-fill"],
         default_index=0
